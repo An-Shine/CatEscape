@@ -6,7 +6,7 @@ public class ArroyGenerator : MonoBehaviour
 {
 
     public GameObject arrowPrefab;
-    float spawnTime = 1.0f;
+    float spawnTime = 0.5f;
     float delta = 0f;
 
     void Start()
