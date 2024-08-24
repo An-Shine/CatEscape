@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class ArroyController : MonoBehaviour
 {
-    
+    GameObject player;
     void Start()
     {
-        
+        player = GameObject.Find("player");
     }
-    public GameObject player;
+
 
     void Update()
     {
+
+        transform.Translate(0, -0.1f, 0);
+
+        if (transform.position.y < -5.0f)
+        {
+            Destroy(this.gameObject);
+
+        }
+
         Vector2 p1 = this.transform.position;
         Vector2 p2 = player.transform.position;
 

@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour
     {
     
     }
-    public GameObject player;
-    // Update is called once per frame
+    GameObject player;
     void Update()
     {
         if(Input.GetKey(KeyCode.LeftArrow))
