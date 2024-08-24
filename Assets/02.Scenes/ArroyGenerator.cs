@@ -22,7 +22,7 @@ public class ArroyGenerator : MonoBehaviour
         {
             this.delta = 0f;
             GameObject arrow = Instantiate(arrowPrefab);
-            int randX = Random.Range(-6, 7);
+            float randX = Random.Range(-9.5f, 9.5f);
             arrow.transform.position = new Vector3(randX, 7, 0);
 
         }
