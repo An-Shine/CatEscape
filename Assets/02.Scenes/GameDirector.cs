@@ -7,7 +7,9 @@ public class GameDirector : MonoBehaviour
 {
     GameObject hpGauge;
     public GameObject gameOverText;
-    
+    public Text playTimeText;
+    float delta = 0f;
+
     void Start()
     {
         hpGauge = GameObject.Find("HpGauge");
@@ -22,5 +24,13 @@ public class GameDirector : MonoBehaviour
         {
             gameOverText.SetActive(true);
         }
+    }
+
+
+
+    void Update()
+    {
+        this.delta += Time.deltaTime;
+        playTimeText.text = delta.ToString("F2") + "sec";
     }
 }
