@@ -22,7 +22,9 @@ public class PlayerController : MonoBehaviour
             transform.Translate(0.5f, 0, 0);
         }
 
+        float x = Mathf.Clamp(transform.position.x, -9.5f, 9.5f);
 
+        transform.position = new Vector3(x, transform.position.y, transform.position.z);
 
 
     }
