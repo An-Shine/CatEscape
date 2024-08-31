@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour
 {
@@ -33,4 +34,14 @@ public class GameDirector : MonoBehaviour
         this.delta += Time.deltaTime;
         playTimeText.text = delta.ToString("F2") + "sec";
     }
+
+
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }
+
+
+
